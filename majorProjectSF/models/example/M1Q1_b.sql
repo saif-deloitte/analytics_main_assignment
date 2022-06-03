@@ -1,4 +1,4 @@
-SELECT fund_category.category, to_char(nav_date, 'mm YYYY') as month_of_year, avg(nav) as avg_nav
+SELECT fund_category.category, to_char(to_date(nav_date, 'YYYY-MM-DD'),'MM-YYYY') as month_of_year, avg(nav) as avg_nav
 FROM nav_history
 INNER JOIN
 mutual_fund
@@ -8,4 +8,4 @@ INNER JOIN
 fund_category
 ON
 mutual_fund.category_id = fund_category.id
-group by to_char(nav_date, 'mm YYYY'), fund_category.category
+group by month_of_year, fund_category.category

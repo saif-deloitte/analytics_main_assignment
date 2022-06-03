@@ -2,20 +2,12 @@
 version: 2
 
 models:
-  - name: my_first_dbt_model
-    description: "A starter dbt model"
-    columns:
-      - name: id
-        description: "The primary key for this table"
-        tests:
-          - unique
-          - not_null
+  - name: M1Q1_a
 
-  - name: my_second_dbt_model
-    description: "A starter dbt model"
-    columns:
-      - name: id
-        description: "The primary key for this table"
-        tests:
-          - unique
-          - not_null
+  - name: M1Q1_b
+
+  - name: m1q2_max
+
+  - name: m1q2_min
+
+  - name: m2q3
